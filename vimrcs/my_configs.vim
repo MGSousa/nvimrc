@@ -1,14 +1,9 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" venjiang's nvim config 
-" http://blog.venjiang.com                       
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " =>General
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" 行号
+" set line number
 set nu
-" 相对行号
+
 set relativenumber
 augroup relative_number
     autocmd!
@@ -19,23 +14,18 @@ augroup relative_number
     " Fix syntax highlighting
     autocmd BufEnter * :syntax sync fromstart
 augroup END
-" 行号背景
+
 hi LineNr ctermbg=235 
-" 列标尺
 " set colorcolumn=80
 " hi ColorColumn ctermbg=237
 " set autowrite
 set updatetime=100
-" 关闭错误提示音 
 set vb t_vb=
-" 鼠标支持
 set mouse=a
-" 退出后显示内容
 " set t_ti= t_te=
 " au BufWinLeave * silent mkview
 " au BufWinEnter * silent loadview
 
-" 高亮
 hi Cursor cterm=reverse ctermbg=22
 set cursorline
 hi CursorLine   cterm=NONE ctermbg=237 ctermfg=none 
@@ -47,13 +37,9 @@ hi Normal ctermfg=254 ctermbg=234 guifg=#d0d0d0 guibg=#202020
 hi MatchParen ctermfg=15 ctermbg=2 gui=underline guifg=#61AFEF
 " hi MatchParen term=reverse ctermbg=90 guibg=#800080
 " let g:airline_theme='onedark'
-" 分隔条
 hi VertSplit ctermfg=8 ctermbg=234 guifg=#e0e0e0 guibg=#000000
-" 注释
 hi Comment ctermfg=66  
-" 选区
 " hi Visual ctermbg=237 
-" 非文本
 " hi NonText  ctermfg=7
 " guibg=76 guifg=white
 " buffer next/previous
@@ -81,7 +67,6 @@ noremap <leader>c  :close<cr>
 noremap oo  o<Esc>
 noremap ii  i<cr><Esc>
 noremap <space><space>  i<space><Esc>
-" 编辑
 inoremap <c-f> <right>
 inoremap <c-l> <right>
 inoremap <c-b> <left>
@@ -104,7 +89,7 @@ noremap <leader>6  :tabn6<cr>
 noremap <leader>7  :tabn7<cr>
 noremap <leader>8  :tabn8<cr>
 noremap <leader>9  :tabn9<cr>
-" 终端
+
 "
 " open new split panes to right and below
 " set splitright
@@ -163,11 +148,9 @@ vmap <Leader>p "+p
 vmap <Leader>P "+P
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => 有道词典
-" 在普通模式下，按 ctrl+t， 会翻译当前光标下的单词；
-" 在 visual 模式下选中单词或语句，按 ctrl+t，会翻译选择的单词或语句；
-" 点击引导键再点y，d，可以在命令行输入要翻译的单词或语句；
-" 译文将会在编辑器底部的命令栏显示。
+" => dictionary
+" Normal mode ctrl+t
+" Visual mode ctrl+t；
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vnoremap <silent> <C-T> :<C-u>Ydv<CR>
 " nnoremap <silent> <C-T> :<C-u>Ydc<CR>
