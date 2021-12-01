@@ -18,11 +18,10 @@
     "coc.preferences.extensionUpdateCheck": "weekly",
     "coc.preferences.formatOnSaveFiletypes": [
         "rust"
-    ],
-    "tsserver.formatOnType": true,
+    ], 
     "coc.preferences.formatOnType": true,
     "rust-analyzer.inlayHints.enable": false,
     "rust-analyzer.hoverActions.linksInHover": true, 
-    "hover.floatMaxHeight": 20 ,
+    "hover.floatMaxHeight": 20,
     "hover.floatMaxWidth": 80
 }

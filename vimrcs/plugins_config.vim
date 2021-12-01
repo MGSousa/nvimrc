@@ -25,7 +25,6 @@ nmap <C-p> <Plug>yankstack_substitute_older_paste
 nmap <C-n> <Plug>yankstack_substitute_newer_paste
 
 
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => ZenCoding
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -115,12 +114,10 @@ let g:goyo_margin_top = 2
 let g:goyo_margin_bottom = 2
 nnoremap <silent> <leader>z :Goyo<cr>
 
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Ale (syntax checker and linter)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ale_linters = {
-\   'javascript': ['jshint'],
 \   'python': ['flake8'],
 \   'go': ['go', 'golint', 'errcheck']
 \}
@@ -148,9 +145,6 @@ let g:ctrlp_working_path_mode = 0
 let g:ctrlp_map = '<C-f>'
 " map <leader>j :CtrlP<cr>
 map <C-b> :CtrlPBuffer<cr>
-
-let g:ctrlp_max_height = 20
-let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => ctrlp-funky 
@@ -212,8 +206,6 @@ let g:indentLine_setConceal = 0
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
-
-
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vim-go
@@ -339,38 +331,6 @@ nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Flutter settings
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:lsc_server_commands = {'dart': 'dart_language_server'}
-" Use all the defaults (recommended):
-let g:lsc_auto_map = v:true
-let g:lsc_auto_map = {'defaults': v:true, 'GoToDefinition': 'gd'}
-
-" Apply the defaults with a few overrides:
-" let g:lsc_auto_map = {'defaults': v:true, 'FindReferences': '<leader>r'}
-
-" Setting a value to a blank string leaves that command unmapped:
-" let g:lsc_auto_map = {'defaults': v:true, 'FindImplementations': ''}
-
-" ... or set only the commands you want mapped without defaults.
-" Complete default mappings are:
-" let g:lsc_auto_map = {
-"     \ 'GoToDefinition': '<C-]>',
-"     \ 'GoToDefinitionSplit': ['<C-W>]', '<C-W><C-]>'],
-"     \ 'FindReferences': 'gr',
-"     \ 'NextReference': '<C-n>',
-"     \ 'PreviousReference': '<C-p>',
-"     \ 'FindImplementations': 'gI',
-"     \ 'FindCodeActions': 'ga',
-"     \ 'Rename': 'gR',
-"     \ 'ShowHover': v:true,
-"     \ 'DocumentSymbol': 'go',
-"     \ 'WorkspaceSymbol': 'gS',
-"     \ 'SignatureHelp': 'gm',
-"     \ 'Completion': 'completefunc',
-"     \}
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Coc extensions settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "  coc-translator
@@ -391,48 +351,9 @@ let g:lsc_auto_map = {'defaults': v:true, 'GoToDefinition': 'gd'}
 " nmap <Leader>bk <Plug>(coc-bookmark-prev)
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Coc Flutter settings
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-xmap <leader>d  <Plug>(coc-codeaction-selected)
-nmap <leader>d  <Plug>(coc-codeaction-selected)
-
-" Applying codeAction to the selected region.
-
-" Example: <leader>dap for current paragraph, <leader>dw for the current word
-
-" Then you will see action list:
-
-" Wrap with Widget
-" Wrap with Center
-" ...
-"
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Nim settings
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-fun! JumpToDef()
-  if exists("*GotoDefinition_" . &filetype)
-    call GotoDefinition_{&filetype}()
-  else
-    exe "norm! \<C-]>"
-  endif
-endf
-
-" Jump to tag
-" nn gd :call JumpToDef()<cr>
-" ino gd <esc>:call JumpToDef()<cr>i
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Rust settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" 设置 hover 悬浮文档
 nnoremap <silent> <leader>h :call CocActionAsync('doHover')<CR>
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => JavaScript settings
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
-autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Others settings

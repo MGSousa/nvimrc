@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 set -e
 
 cd ~/.vim
@@ -15,5 +15,10 @@ try
     source ~/.vim/vimrcs/my_configs.vim
 catch
 endtry' > ~/.config/nvim/init.vim
+
+HAS_NVIM=$(which nvim &>/dev/null && echo 1 || echo 0)
+if [ "$HAS_NVIM" = 1 ]; then
+	mv coc-settings.json ~/.config/nvim/
+fi;
 
 echo "Installed the Ultimate Newovim configuration successfully! Enjoy :-)"
