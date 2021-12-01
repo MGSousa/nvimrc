@@ -17,11 +17,6 @@
     "list.source.files.defaultOptions": ["--number-select"],
     "coc.preferences.extensionUpdateCheck": "weekly",
     "coc.preferences.formatOnSaveFiletypes": [
-        "javascript",
-        "javascriptreact",
-        "typescript",
-        "typescriptreact",
-        "dart",
         "rust"
     ],
     "tsserver.formatOnType": true,
