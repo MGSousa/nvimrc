@@ -50,7 +50,7 @@ $uri = 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 The version includes a lot of great plugins, configurations and color schemes that make Neovim a lot better. To install it simply do following from your terminal:
 
 ```shell
-git clone --depth=1 https://github.com/venjiang/nvimrc.git ~/.vim
+git clone --depth=1 https://github.com/MGSousa/nvimrc.git ~/.vim
 sh ~/.vim/install.sh
 nvim +PlugInstall
 ```
@@ -271,7 +271,7 @@ map <leader>s? z=
 ```
 
 
-### Cope
+### Cope - open window to show current list of errors
 Query `:help cope` if you are unsure what cope is. It's super useful!
 
 When you search with `Ack.vim`, display your results in cope by doing:
