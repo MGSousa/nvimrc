@@ -16,7 +16,7 @@ try
 catch
 endtry' > ~/.config/nvim/init.vim
 
-HAS_NVIM=$(which nvim &>/dev/null && echo 1 || echo 0)
+HAS_NVIM=$(which nvim 1>/dev/null && echo 1 || echo 0)
 if [ "$HAS_NVIM" = 1 ]; then
 	mv coc-settings.json ~/.config/nvim/
 fi;
