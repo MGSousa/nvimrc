@@ -55,6 +55,7 @@ Plug 'michaeljsmith/vim-indent-object'
 " tools
 Plug 'simeji/winresizer'
 Plug 'ianva/vim-youdao-translater'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 " Plug 'mhinz/vim-startify'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 " scheme
