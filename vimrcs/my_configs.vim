@@ -21,10 +21,8 @@ hi LineNr ctermbg=235
 " set autowrite
 set updatetime=100
 set vb t_vb=
-set mouse=a
-" set t_ti= t_te=
-" au BufWinLeave * silent mkview
-" au BufWinEnter * silent loadview
+set mouse=r
+vmap <LeftRelease>
 
 hi Cursor cterm=reverse ctermbg=22
 set cursorline
