@@ -21,7 +21,7 @@ hi LineNr ctermbg=235
 " set autowrite
 set updatetime=100
 set vb t_vb=
-set mouse=r
+set mouse=a
 vmap <LeftRelease>
 
 hi Cursor cterm=reverse ctermbg=22
